@@ -123,8 +123,8 @@
 		D9905C6C23352C630027E871 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D930E72A2333FF6B0033FD7C /* LaunchScreen.storyboard */,
 				D930E7252333FF690033FD7C /* Main.storyboard */,
+				D930E72A2333FF6B0033FD7C /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

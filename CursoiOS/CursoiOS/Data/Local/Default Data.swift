@@ -22,7 +22,7 @@ let defaultTeachers = [Teacher(name: "Juan", email: "juan@gmail.com", type: .ext
                        Teacher(name: "Luisa", email: "luisa@gmail.com", type: .extern)]
 
 let subjects = [Subject(name: "Android", teachers: defaultTeachers.filter{$0.name?.contains("u") ?? false}, students: defaultStudents.filter{$0.name?.contains("a") ?? false}),
-                Subject(name: "Ubuntu", teachers: defaultTeachers.filter{$0.name?.contains("o") ?? false}, students: defaultStudents.filter{$0.name?.contains("e") ?? false}),
-                Subject(name: "Java", teachers: defaultTeachers.filter{$0.name?.contains("i") ?? false}, students: defaultStudents.filter{$0.name?.contains("i") ?? false}),
-                Subject(name: "Safari", teachers: defaultTeachers.filter{$0.name?.contains("e") ?? false}, students: defaultStudents.filter{$0.name?.contains("o") ?? false}),
-                Subject(name: "Firefox", teachers: defaultTeachers.filter{$0.name?.contains("a") ?? false}, students: defaultStudents.filter{$0.name?.contains("u") ?? false})]
+                Subject(name: "Dart", teachers: defaultTeachers.filter{$0.name?.contains("o") ?? false}, students: defaultStudents.filter{$0.name?.contains("e") ?? false}),
+                Subject(name: "IOS", teachers: defaultTeachers.filter{$0.name?.contains("i") ?? false}, students: defaultStudents.filter{$0.name?.contains("i") ?? false}),
+                Subject(name: "Javascript", teachers: defaultTeachers.filter{$0.name?.contains("e") ?? false}, students: defaultStudents.filter{$0.name?.contains("o") ?? false}),
+                Subject(name: "Python", teachers: defaultTeachers.filter{$0.name?.contains("a") ?? false}, students: defaultStudents.filter{$0.name?.contains("u") ?? false})]
