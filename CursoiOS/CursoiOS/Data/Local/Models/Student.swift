@@ -9,6 +9,7 @@
 import Foundation
 class Student: CustomStringConvertible {
     
+    var avatar: String?
     var name: String?
     var email: String?
     var birthdate: Date?
@@ -17,10 +18,11 @@ class Student: CustomStringConvertible {
         return  "Student data: \(String(describing: name)) \(String(describing: email))"
     }
     
-    convenience init(name: String, email: String? = nil, birthdate: Date? = nil) {
+    convenience init(name: String, email: String? = nil, birthdate: Date? = nil, avatar: String? = nil) {
         self.init()
         self.name = name
         self.email = email
         self.birthdate = birthdate
+        self.avatar = avatar
     }
 }

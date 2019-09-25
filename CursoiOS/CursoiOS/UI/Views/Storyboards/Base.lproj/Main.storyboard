@@ -13,25 +13,106 @@
         <!--Students-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CursoiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StudentViewController" customModule="CursoiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-mi-sRc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentViewCell" rowHeight="140" id="Itc-oq-di6" customClass="StudentViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Itc-oq-di6" id="eMA-Pm-eMY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-OB-Igs">
+                                                    <rect key="frame" x="12" y="12" width="390" height="116"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Jm-k6-DZ3">
+                                                            <rect key="frame" x="8" y="8" width="374" height="100"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_student_1" translatesAutoresizingMaskIntoConstraints="NO" id="qJY-p0-RHR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="B83-Nt-Rfv"/>
+                                                                        <constraint firstAttribute="width" constant="80" id="hxa-fu-ZAG"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6ln-H1-MST">
+                                                                    <rect key="frame" x="88" y="0.0" width="286" height="100"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Completo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4H-ra-1gW">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="46"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electronico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HB-Rq-Z12">
+                                                                            <rect key="frame" x="0.0" y="54" width="286" height="46"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="2Jm-k6-DZ3" firstAttribute="leading" secondItem="iJR-OB-Igs" secondAttribute="leading" constant="8" id="7mB-Vn-X6g"/>
+                                                        <constraint firstItem="2Jm-k6-DZ3" firstAttribute="top" secondItem="iJR-OB-Igs" secondAttribute="top" constant="8" id="DtP-gU-9Mv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2Jm-k6-DZ3" secondAttribute="bottom" constant="8" id="QWG-nx-jRX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Jm-k6-DZ3" secondAttribute="trailing" constant="8" id="ZJf-ge-nae"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iJR-OB-Igs" firstAttribute="top" secondItem="eMA-Pm-eMY" secondAttribute="top" constant="12" id="4rH-V7-i8D"/>
+                                                <constraint firstItem="iJR-OB-Igs" firstAttribute="leading" secondItem="eMA-Pm-eMY" secondAttribute="leading" constant="12" id="XCb-tO-WLk"/>
+                                                <constraint firstAttribute="trailing" secondItem="iJR-OB-Igs" secondAttribute="trailing" constant="12" id="ouS-cX-75S"/>
+                                                <constraint firstAttribute="bottom" secondItem="iJR-OB-Igs" secondAttribute="bottom" constant="12" id="tE0-wP-LZv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="8HB-Rq-Z12" id="dgp-lz-emL"/>
+                                            <outlet property="imageInCell" destination="qJY-p0-RHR" id="Ej7-IR-7cR"/>
+                                            <outlet property="name" destination="T4H-ra-1gW" id="XET-cm-e3m"/>
+                                            <outlet property="viewInCell" destination="iJR-OB-Igs" id="rLv-ZM-nS0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzg-mi-sRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B08-4T-bsf"/>
+                            <constraint firstItem="uzg-mi-sRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1H-j4-exT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uzg-mi-sRc" secondAttribute="bottom" id="xZ9-EK-VId"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uzg-mi-sRc" secondAttribute="trailing" id="ylw-Pn-uLj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Students" image="ic_tab_students" id="0jQ-0X-23M"/>
+                    <connections>
+                        <outlet property="tableView" destination="uzg-mi-sRc" id="bbI-f8-twe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Xg4-aZ-eGO">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="80W-mo-qPn" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="80W-mo-qPn" customClass="MainViewController" customModule="CursoiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e6a-fK-ZNv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -46,5 +127,6 @@
     </scenes>
     <resources>
         <image name="ic_tab_students" width="30" height="27"/>
+        <image name="img_student_1" width="400" height="588"/>
     </resources>
 </document>

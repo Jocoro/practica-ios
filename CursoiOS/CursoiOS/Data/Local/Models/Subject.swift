@@ -8,6 +8,7 @@
 
 import Foundation
 class Subject: CustomStringConvertible {
+    var avatar: String?
     var name: String?
     var teachers: [Teacher] = []
     var students: [Student] = []
@@ -20,11 +21,12 @@ class Subject: CustomStringConvertible {
     var description: String {
         return "Subject data: \(String(describing: name))"
     }
-    convenience init(name: String, teachers: [Teacher] = [], students: [Student] = []) {
+    convenience init(name: String, teachers: [Teacher] = [], students: [Student] = [], avatar: String? = nil) {
         self.init()
         
         self.name = name
         self.teachers = teachers
         self.students = students
+        self.avatar = avatar
     }
 }

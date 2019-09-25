@@ -31,6 +31,7 @@ class Teacher: Hashable, CustomStringConvertible {
     func hash(into hasher: inout Hasher) {
         return hasher.combine(ObjectIdentifier(self))
     }
+    var avatar: String?
     var name: String?
     var email: String?
     var type: TeacherType?
@@ -38,10 +39,11 @@ class Teacher: Hashable, CustomStringConvertible {
     var description: String {
         return "Teacher data: \(String(describing: name)) \(String(describing: email))"
     }
-    convenience init(name: String, email: String? = nil, type: TeacherType? = nil) {
+    convenience init(name: String, email: String? = nil, type: TeacherType? = nil, avatar: String? = nil) {
         self.init()
         self.name = name
         self.email = email
         self.type = type
+        self.avatar = avatar
     }
 }
