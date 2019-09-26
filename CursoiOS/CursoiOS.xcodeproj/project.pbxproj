@@ -20,6 +20,8 @@
 		D99B237B233BB11C0003276D /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B237A233BB11C0003276D /* StudentViewController.swift */; };
 		D99B237D233BD5DC0003276D /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B237C233BD5DC0003276D /* StudentViewCell.swift */; };
 		D9FC1134233D08DA00FB1E07 /* TeacherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */; };
+		D9FC1136233D293800FB1E07 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC1135233D293800FB1E07 /* SubjectViewController.swift */; };
+		D9FC1138233D2A2400FB1E07 /* SubjectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC1137233D2A2400FB1E07 /* SubjectViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		D99B237A233BB11C0003276D /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		D99B237C233BD5DC0003276D /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
 		D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewCell.swift; sourceTree = "<group>"; };
+		D9FC1135233D293800FB1E07 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		D9FC1137233D2A2400FB1E07 /* SubjectViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				D99B237C233BD5DC0003276D /* StudentViewCell.swift */,
 				D98BB58F233D040600ACE29E /* TeacherViewController.swift */,
 				D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */,
+				D9FC1135233D293800FB1E07 /* SubjectViewController.swift */,
+				D9FC1137233D2A2400FB1E07 /* SubjectViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,11 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D985E47C23391555002140BF /* Default Data.swift in Sources */,
+				D9FC1136233D293800FB1E07 /* SubjectViewController.swift in Sources */,
 				D9FC1134233D08DA00FB1E07 /* TeacherViewCell.swift in Sources */,
 				D9905C722335470D0027E871 /* Teacher.swift in Sources */,
 				D99B237D233BD5DC0003276D /* StudentViewCell.swift in Sources */,
 				D9905C74233547410027E871 /* Subject.swift in Sources */,
 				D930E7242333FF690033FD7C /* MainViewController.swift in Sources */,
+				D9FC1138233D2A2400FB1E07 /* SubjectViewCell.swift in Sources */,
 				D98BB590233D040600ACE29E /* TeacherViewController.swift in Sources */,
 				D9905C70233535320027E871 /* Student.swift in Sources */,
 				D99B237B233BB11C0003276D /* StudentViewController.swift in Sources */,
