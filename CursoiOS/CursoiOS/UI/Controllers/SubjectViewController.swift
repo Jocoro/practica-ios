@@ -20,7 +20,7 @@ class SubjectViewController: UIViewController {
     /// Configure tableView with default options
     
 }
-extension SubjectViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension SubjectViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     /// Configure table view
     func configureCollectionView(){
@@ -40,6 +40,17 @@ extension SubjectViewController: UICollectionViewDataSource, UICollectionViewDel
             cell.configureCell(subject: subject)
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+return 16.0
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.frame.size.width - 16.0) / 2
+        return CGSize(width: size, height: size)
     }
 }
 

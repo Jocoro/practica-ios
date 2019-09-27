@@ -18,7 +18,12 @@ class StudentViewCell: UITableViewCell {
         name.text = nil
         email.text = nil
     }
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        viewInCell.configureShadows()
+        viewInCell.layer.cornerRadius = 8.0
+       
+    }
     func configureCell(student: Student){
         imageInCell.image = UIImage(named: student.avatar ?? "")
         name.text = student.name

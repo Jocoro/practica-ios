@@ -8,11 +8,11 @@
 
 import Foundation
 let defaultStudents = [Student(name: "Jorge", email: "jorge@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1984, month:9)), avatar: "img_student_2"),
-                       Student(name: "José", email: "josw@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1954, month:3)), avatar: "img_student_7"),
+                       Student(name: "José", email: "josé@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1954, month:3)), avatar: "img_student_7"),
                        Student(name: "Joaquin", email: "joaquin@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1923, month:5)), avatar: "img_student_6"),
-                       Student(name: "Jaime", email: "jaime@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1931, month:4)), avatar: "img_student_4"),
+                       Student(name: "Jaime", email: "jaime@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1931, month:4)), avatar: "img_student_7"),
                        Student(name: "Javier", email: "javier@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1921, month:2)), avatar: "img_student_3"),
-                       Student(name: "Mara", email: "mara@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1968, month:2)), avatar: "img_student_5"),
+                       Student(name: "Maria", email: "maria@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1968, month:2)), avatar: "img_student_5"),
                        Student(name: "Raquel", email: "raquel@gmail.com", birthdate: Calendar.current.date(from: DateComponents(year: 1911, month:1)), avatar: "img_student_1")]
 
 let defaultTeachers = [Teacher(name: "Juan", email: "juan@gmail.com", type: .extern, avatar: "img_teacher_2"),
