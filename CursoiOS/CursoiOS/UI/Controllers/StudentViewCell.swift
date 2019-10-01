@@ -22,7 +22,7 @@ class StudentViewCell: UITableViewCell {
         super.awakeFromNib()
         viewInCell.configureShadows()
         viewInCell.layer.cornerRadius = 8.0
-       
+        
     }
     func configureCell(student: Student){
         imageInCell.image = UIImage(named: student.avatar ?? "")

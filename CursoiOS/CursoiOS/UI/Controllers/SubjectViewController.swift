@@ -32,17 +32,17 @@ extension SubjectViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectViewCell", for: indexPath) as? SubjectViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailViewCell.cellIdentifier, for: indexPath) as? DetailViewCell else {
             return UICollectionViewCell()
         }
         if(indexPath.row < subjects.count){
             let subject = subjects[indexPath.row]
-            cell.configureCell(subject: subject)
+            cell.configureCell(image: subject.avatar, title: subject.name)
         }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-return 16.0
+        return 16.0
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -53,5 +53,15 @@ return 16.0
         return CGSize(width: size, height: size)
     }
 }
-
+extension SubjectViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? SubjectDetailViewController,
+            let cell = sender as? UICollectionViewCell,
+            let indexPath = collectionView.indexPath(for: cell) else {
+                return
+        }
+        destination.subject = subjects[indexPath.row]
+        
+    }
+}
 

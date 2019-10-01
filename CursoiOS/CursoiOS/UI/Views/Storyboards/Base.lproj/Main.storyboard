@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-mi-sRc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentViewCell" rowHeight="140" id="Itc-oq-di6" customClass="StudentViewCell" customModule="CursoiOS" customModuleProvider="target">
@@ -83,6 +83,7 @@
                                             <outlet property="imageInCell" destination="qJY-p0-RHR" id="Ej7-IR-7cR"/>
                                             <outlet property="name" destination="T4H-ra-1gW" id="XET-cm-e3m"/>
                                             <outlet property="viewInCell" destination="iJR-OB-Igs" id="rLv-ZM-nS0"/>
+                                            <segue destination="d6h-U4-u3L" kind="show" id="RmN-bD-5hB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,14 +98,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Students" image="ic_tab_students" id="0jQ-0X-23M"/>
+                    <navigationItem key="navigationItem" title="Students" id="rDA-XI-AZ0">
+                        <barButtonItem key="backBarButtonItem" title="Student List" id="j0D-mz-c1i"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uzg-mi-sRc" id="bbI-f8-twe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="-496.20535714285711"/>
         </scene>
         <!--TeacherViewController-->
         <scene sceneID="9Ug-Z8-wvh">
@@ -115,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="upH-VI-3T6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeacherViewCell" rowHeight="136" id="Tto-xA-S4A" customClass="TeacherViewCell" customModule="CursoiOS" customModuleProvider="target">
@@ -186,6 +189,7 @@
                                             <outlet property="name" destination="0j7-Uw-CnF" id="D8D-6S-XBh"/>
                                             <outlet property="teacherType" destination="u0A-is-azo" id="6qT-dT-1Ox"/>
                                             <outlet property="viewInCell" destination="GeQ-I2-6RK" id="Qra-b2-l8n"/>
+                                            <segue destination="o95-zB-hI7" kind="show" id="EfB-hD-ilo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -200,14 +204,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ehk-eX-UPu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Teachers" image="ic_tab_teachers" id="bsJ-kA-wAV"/>
+                    <navigationItem key="navigationItem" title="Teachers" id="emg-US-B4L">
+                        <barButtonItem key="backBarButtonItem" title="Teacher List" id="dH5-qS-Yds"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="upH-VI-3T6" id="py2-8s-EGB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wa-jT-Cgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766.6666666666667" y="142.63392857142856"/>
+            <point key="canvasLocation" x="1861" y="152"/>
+        </scene>
+        <!--DetailStudent-->
+        <scene sceneID="MDn-yI-ASL">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailStudent" storyboardName="DetailStudent" id="d6h-U4-u3L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uW4-a3-hYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526.0869565217395" y="-496.20535714285711"/>
+        </scene>
+        <!--DetailTeacher-->
+        <scene sceneID="3oH-ET-Dw1">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailTeacher" storyboardName="DetailTeacher" id="o95-zB-hI7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-7K-Ufr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655.072463768116" y="138.61607142857142"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="fCB-5K-3Ka">
@@ -218,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-1N-eYS">
-                                <rect key="frame" x="12" y="56" width="390" height="745"/>
+                                <rect key="frame" x="12" y="100" width="390" height="701"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4mV-OO-odx">
                                     <size key="itemSize" width="150" height="150"/>
@@ -227,7 +249,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubjectViewCell" id="InE-7Z-Upp" customClass="SubjectViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewCell" id="InE-7Z-Upp" customClass="DetailViewCell" customModule="CursoiOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -284,6 +306,7 @@
                                             <outlet property="name" destination="2b5-Ii-uQn" id="XCh-Ju-428"/>
                                             <outlet property="shadowView" destination="veW-fJ-20G" id="gsk-1o-r5d"/>
                                             <outlet property="viewInCell" destination="5qy-1y-yHg" id="mz5-jn-zkC"/>
+                                            <segue destination="Wvo-oD-kue" kind="show" id="5Ki-Nu-CqK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -298,14 +321,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ati-kR-BH3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Subjects" image="ic_tab_subjects" id="V2U-Ea-y6t"/>
+                    <navigationItem key="navigationItem" title="Subjects" id="hSI-8T-eHq">
+                        <barButtonItem key="backBarButtonItem" title="Subject List" id="wjV-fQ-GqX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="ELX-1N-eYS" id="f5s-pp-8h0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjD-3Z-JCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498.5507246376815" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="815.625"/>
+        </scene>
+        <!--DetailSubject-->
+        <scene sceneID="FnX-89-Ve0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailSubject" storyboardName="DetailSubject" id="Wvo-oD-kue" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeP-Rb-P0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505.7971014492755" y="815.625"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Xg4-aZ-eGO">
@@ -318,14 +351,71 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TOk-bG-kAW"/>
-                        <segue destination="Tr6-Qw-1B1" kind="relationship" relationship="viewControllers" id="0f9-d6-jqn"/>
-                        <segue destination="YMf-yQ-z96" kind="relationship" relationship="viewControllers" id="UOb-mN-h00"/>
+                        <segue destination="4M3-4c-c3m" kind="relationship" relationship="viewControllers" id="TOk-bG-kAW"/>
+                        <segue destination="KTg-EI-8Lh" kind="relationship" relationship="viewControllers" id="0f9-d6-jqn"/>
+                        <segue destination="otY-1d-lH5" kind="relationship" relationship="viewControllers" id="UOb-mN-h00"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIS-Se-f3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Teachers-->
+        <scene sceneID="Bfa-5U-aiR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KTg-EI-8Lh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Teachers" image="ic_tab_teachers" id="bsJ-kA-wAV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zCW-wB-Dna">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tr6-Qw-1B1" kind="relationship" relationship="rootViewController" id="aro-Wj-qoT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEI-Rz-r45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="159"/>
+        </scene>
+        <!--Subjects-->
+        <scene sceneID="rIr-Ym-Yqr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otY-1d-lH5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Subjects" image="ic_tab_subjects" id="V2U-Ea-y6t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pQ6-nx-hLi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YMf-yQ-z96" kind="relationship" relationship="rootViewController" id="jhA-mR-cgd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIo-sm-tzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.5942028985507" y="815.625"/>
+        </scene>
+        <!--Students-->
+        <scene sceneID="jSS-4n-dp9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4M3-4c-c3m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Students" image="ic_tab_students" id="0jQ-0X-23M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nh5-L2-X0K">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KVK-gw-tEl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BH5-6A-TVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.5942028985507" y="-496.20535714285711"/>
         </scene>
     </scenes>
     <resources>

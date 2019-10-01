@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Subject Detail View Controller-->
         <scene sceneID="qn9-zp-gle">
             <objects>
-                <viewController id="Ynw-ak-ugP" customClass="DetailViewController" customModule="CursoiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ynw-ak-ugP" customClass="SubjectDetailViewController" customModule="CursoiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DcV-Yb-EeD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,10 +67,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-CR-01Y">
-                                <rect key="frame" x="8" y="240" width="398" height="120"/>
+                                <rect key="frame" x="8" y="240" width="398" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="ZDZ-go-EfV"/>
+                                    <constraint firstAttribute="height" constant="150" id="ZDZ-go-EfV"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i0d-CZ-qpP">
                                     <size key="itemSize" width="84" height="102"/>
@@ -79,8 +79,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FirstDetailViewCell" id="xUI-MH-OGd" customClass="DetailViewCell" customModule="CursoiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="9" width="84" height="102"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewCell" id="xUI-MH-OGd" customClass="DetailViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24" width="84" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="84" height="102"/>
@@ -135,12 +135,13 @@
                                             <outlet property="imageInCell" destination="7tF-DA-dJS" id="gcb-W9-dAa"/>
                                             <outlet property="name" destination="i9G-Hc-ZPB" id="She-95-zZb"/>
                                             <outlet property="shadowView" destination="ZIW-ZF-E9E" id="6UL-kD-78E"/>
+                                            <outlet property="viewInCell" destination="jzB-w9-ZRI" id="ieh-yf-d5X"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segundo detalle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-9I-2pt">
-                                <rect key="frame" x="8" y="380" width="398" height="36"/>
+                                <rect key="frame" x="8" y="410" width="398" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="JGd-EX-dGq"/>
                                 </constraints>
@@ -149,10 +150,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Il8-1h-PaN">
-                                <rect key="frame" x="8" y="436" width="398" height="120"/>
+                                <rect key="frame" x="8" y="466" width="398" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="uyY-Zh-fAI"/>
+                                    <constraint firstAttribute="height" constant="150" id="uyY-Zh-fAI"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BL5-iB-dOj">
                                     <size key="itemSize" width="88" height="105"/>
@@ -161,8 +162,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecondDetailViewCell" id="Vyu-pl-HOT" customClass="DetailViewCell" customModule="CursoiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7.5" width="88" height="105"/>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewCell" id="Vyu-pl-HOT" customClass="DetailViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22.5" width="88" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="88" height="105"/>
@@ -217,6 +218,7 @@
                                             <outlet property="imageInCell" destination="Yb4-uA-7CN" id="Pry-ta-JIS"/>
                                             <outlet property="name" destination="BQc-m9-KsX" id="pQL-LI-tQw"/>
                                             <outlet property="shadowView" destination="3Tx-PU-vEh" id="Dab-dM-634"/>
+                                            <outlet property="viewInCell" destination="INa-O5-ic6" id="PBd-9I-nwx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -228,6 +230,9 @@
                                     <constraint firstAttribute="width" constant="120" id="qSO-8f-r4W"/>
                                 </constraints>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="pushButton:" destination="Ynw-ak-ugP" eventType="touchUpInside" id="n46-aD-YrF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -41,4 +41,15 @@ extension TeacherViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+extension TeacherViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? TeacherDetailViewController,
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) else {
+                return
+        }
+        destination.teacher = defaultTeachers[indexPath.row]
+        
+    }
+}
 

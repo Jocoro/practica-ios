@@ -19,7 +19,7 @@ class StudentViewController: UIViewController {
         configureTableView()
     }
     /// Configure tableView with default options
-   
+    
 }
 extension StudentViewController: UITableViewDataSource, UITableViewDelegate {
     /// Configure table view
@@ -36,9 +36,20 @@ extension StudentViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         if(indexPath.row < defaultStudents.count){
-        let student = defaultStudents[indexPath.row]
-        cell.configureCell(student: student)
+            let student = defaultStudents[indexPath.row]
+            cell.configureCell(student: student)
         }
         return cell
+    }
+}
+extension StudentViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? StudentDetailViewController,
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) else {
+                return
+        }
+        destination.student = defaultStudents[indexPath.row]
+        
     }
 }

@@ -8,11 +8,14 @@
 
 import UIKit
 class DetailViewCell: UICollectionViewCell {
+    static let cellIdentifier = String(describing: DetailViewCell.self)
+    
+    // MARK: -Outlets-
     @IBOutlet weak var viewInCell: UIView!
     @IBOutlet weak var imageInCell: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var shadowView: UIView!
-    
+    // MARK: -LyfeCycle -
     override func prepareForReuse() {
         imageInCell.image = nil
         name.text = nil
@@ -25,23 +28,12 @@ class DetailViewCell: UICollectionViewCell {
         shadowView.layer.cornerRadius = 8.0
         shadowView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
-    func configureCell(subject: Subject){
-        imageInCell.image = UIImage(named: subject.avatar ?? "")
-        name.text = subject.name
+    func configureCell(image: String? = nil, title: String? = nil){
+        imageInCell.image = UIImage(named: image ?? "")
+        name.text = title
         
         
     }
-    func configureCell(student: Student){
-        imageInCell.image = UIImage(named: student.avatar ?? "")
-        name.text = student.name
-        
-        
-    }
-    func configureCell(teacher: Teacher){
-        imageInCell.image = UIImage(named: teacher.avatar ?? "")
-        name.text = teacher.name
-        
-        
-    }
+    
 }
 

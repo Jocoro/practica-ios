@@ -18,7 +18,7 @@ class TeacherViewCell: UITableViewCell {
         imageInCell.image = nil
         name.text = nil
         email.text = nil
-       teacherType.text = nil
+        teacherType.text = nil
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class TeacherViewCell: UITableViewCell {
         imageInCell.image = UIImage(named: teacher.avatar ?? "")
         name.text = teacher.name
         email.text = teacher.email
-       teacherType.text = teacher.type?.description
+        teacherType.text = teacher.type?.description
         
     }
 }
