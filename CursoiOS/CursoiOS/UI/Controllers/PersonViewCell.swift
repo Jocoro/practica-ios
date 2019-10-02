@@ -1,24 +1,22 @@
 //
-//  TeacherViewCell.swift
+//  StudentViewCell.swift
 //  CursoiOS
 //
-//  Created by Dev2 on 26/09/2019.
+//  Created by Dev2 on 25/09/2019.
 //  Copyright © 2019 Dev2. All rights reserved.
 //
 
 import UIKit
-class TeacherViewCell: UITableViewCell {
+class PersonViewCell: UITableViewCell {
     @IBOutlet weak var viewInCell: UIView!
     @IBOutlet weak var imageInCell: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var teacherType: UILabel!
     
     override func prepareForReuse() {
         imageInCell.image = nil
         name.text = nil
         email.text = nil
-        teacherType.text = nil
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,12 +24,10 @@ class TeacherViewCell: UITableViewCell {
         viewInCell.layer.cornerRadius = 8.0
         
     }
-    func configureCell(teacher: Teacher){
-        imageInCell.image = UIImage(named: teacher.avatar ?? "")
-        name.text = teacher.name
-        email.text = teacher.email
-        teacherType.text = teacher.type?.description
+    func configureCell(image: String? = nil, name: String? = nil, email: String? = nil){
+        imageInCell.image = UIImage(named: image ?? "")
+        self.name.text = name
+        self.email.text = email
         
     }
 }
-

@@ -19,7 +19,24 @@ class TeacherDetailViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func pushButton(_ sender: UIButton){
-        navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Eliminar profesor", message: "Vas a eliminar al  profesor, ¿estás seguro?",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: {[weak self] _ in
+            //Elimina el profesor de la lista de todos los profesores
+            defaultTeachers.removeAll(where: { $0.name == self?.teacher?.name})
+            //Elimina el profesor de la lista de profesores de cada asignatura donde está
+            subjects.forEach({ subject in
+                subject.teachers.removeAll(where: { $0.name == self?.teacher?.name})
+            })
+            
+            self?.navigationController?.popViewController(animated: true)
+            
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        
+        present(alert, animated: true)
+        
     }
     
     

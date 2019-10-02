@@ -17,6 +17,9 @@ class SubjectViewController: UIViewController {
         super.viewDidLoad()
         configureCollectionView()
     }
+    override func viewWillAppear(_ animated: Bool){
+    collectionView.reloadData()
+    }
     /// Configure tableView with default options
     
 }

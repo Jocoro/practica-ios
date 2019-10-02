@@ -19,7 +19,19 @@ class SubjectDetailViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func pushButton(_ sender: UIButton){
-        navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Eliminar asignatura", message: "Vas a eliminar la asignatura, ¿estás seguro?",
+                          preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: {[weak self] _ in
+            subjects.removeAll(where: { $0.name == self?.subject?.name})
+           
+            self?.navigationController?.popViewController(animated: true)
+            
+        
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        
+        present(alert, animated: true)
+    
     }
     
     var subject: Subject?

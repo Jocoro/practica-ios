@@ -17,6 +17,9 @@ class TeacherViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
     }
+    override func viewWillAppear(_ animated: Bool){
+        tableView.reloadData()
+    }
     /// Configure tableView with default options
     
 }
@@ -31,12 +34,12 @@ extension TeacherViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TeacherViewCell", for: indexPath) as? TeacherViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonViewCell", for: indexPath) as? PersonViewCell else {
             return UITableViewCell()
         }
         if(indexPath.row < defaultTeachers.count){
             let teacher = defaultTeachers[indexPath.row]
-            cell.configureCell(teacher: teacher)
+            cell.configureCell(image: teacher.avatar, name: teacher.name, email: teacher.email)
         }
         return cell
     }

@@ -20,14 +20,13 @@
 		D9905C722335470D0027E871 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9905C712335470D0027E871 /* Teacher.swift */; };
 		D9905C74233547410027E871 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9905C73233547410027E871 /* Subject.swift */; };
 		D99B237B233BB11C0003276D /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B237A233BB11C0003276D /* StudentViewController.swift */; };
-		D99B237D233BD5DC0003276D /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B237C233BD5DC0003276D /* StudentViewCell.swift */; };
+		D99B237D233BD5DC0003276D /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B237C233BD5DC0003276D /* PersonViewCell.swift */; };
 		D99EF849234281490055245F /* DetailTeacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99EF848234281490055245F /* DetailTeacher.storyboard */; };
 		D99EF84B234281B40055245F /* TeacherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99EF84A234281B40055245F /* TeacherDetailViewController.swift */; };
 		D9A71613233E5D6A005EDE29 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A71612233E5D6A005EDE29 /* UIView+Utils.swift */; };
 		D9A71615233E6986005EDE29 /* DetailSubject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A71614233E6986005EDE29 /* DetailSubject.storyboard */; };
 		D9A71619233E7B87005EDE29 /* SubjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A71618233E7B87005EDE29 /* SubjectDetailViewController.swift */; };
 		D9A7161B233E80FE005EDE29 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7161A233E80FE005EDE29 /* DetailViewCell.swift */; };
-		D9FC1134233D08DA00FB1E07 /* TeacherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */; };
 		D9FC1136233D293800FB1E07 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC1135233D293800FB1E07 /* SubjectViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,14 +46,13 @@
 		D9905C712335470D0027E871 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		D9905C73233547410027E871 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		D99B237A233BB11C0003276D /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
-		D99B237C233BD5DC0003276D /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
+		D99B237C233BD5DC0003276D /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		D99EF848234281490055245F /* DetailTeacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTeacher.storyboard; sourceTree = "<group>"; };
 		D99EF84A234281B40055245F /* TeacherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDetailViewController.swift; sourceTree = "<group>"; };
 		D9A71612233E5D6A005EDE29 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D9A71614233E6986005EDE29 /* DetailSubject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailSubject.storyboard; sourceTree = "<group>"; };
 		D9A71618233E7B87005EDE29 /* SubjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailViewController.swift; sourceTree = "<group>"; };
 		D9A7161A233E80FE005EDE29 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
-		D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewCell.swift; sourceTree = "<group>"; };
 		D9FC1135233D293800FB1E07 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,9 +142,8 @@
 			children = (
 				D930E7232333FF690033FD7C /* MainViewController.swift */,
 				D99B237A233BB11C0003276D /* StudentViewController.swift */,
-				D99B237C233BD5DC0003276D /* StudentViewCell.swift */,
+				D99B237C233BD5DC0003276D /* PersonViewCell.swift */,
 				D98BB58F233D040600ACE29E /* TeacherViewController.swift */,
-				D9FC1133233D08DA00FB1E07 /* TeacherViewCell.swift */,
 				D9FC1135233D293800FB1E07 /* SubjectViewController.swift */,
 				D9A71618233E7B87005EDE29 /* SubjectDetailViewController.swift */,
 				D9A7161A233E80FE005EDE29 /* DetailViewCell.swift */,
@@ -272,9 +269,8 @@
 				D985E47C23391555002140BF /* Default Data.swift in Sources */,
 				D9FC1136233D293800FB1E07 /* SubjectViewController.swift in Sources */,
 				D98722CE234276DF00AE6C8A /* StudentDetailViewController.swift in Sources */,
-				D9FC1134233D08DA00FB1E07 /* TeacherViewCell.swift in Sources */,
 				D9905C722335470D0027E871 /* Teacher.swift in Sources */,
-				D99B237D233BD5DC0003276D /* StudentViewCell.swift in Sources */,
+				D99B237D233BD5DC0003276D /* PersonViewCell.swift in Sources */,
 				D9905C74233547410027E871 /* Subject.swift in Sources */,
 				D930E7242333FF690033FD7C /* MainViewController.swift in Sources */,
 				D9A71619233E7B87005EDE29 /* SubjectDetailViewController.swift in Sources */,
